@@ -1,0 +1,200 @@
+body {
+    background: #fff url("../assets/container_bg.png");
+    color: #fff;
+    font-family: "Flexo-Regular", arial, sans-serif;
+    font-size: 16px;
+    height: 100%;
+}
+
+.header {
+    align-content: center;
+    background: rgb(173, 38, 59);
+    background: linear-gradient(142deg, rgba(173, 38, 59, 1) 0%, rgba(172, 57, 57, 1) 39%, rgba(179, 11, 11, 1) 70%, rgba(175, 23, 23, 1) 99%);
+    display: flex;
+    height: 4rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+.footer {
+    bottom: 0;
+    align-content: center;
+    background: rgb(173, 38, 59);
+    background: linear-gradient(142deg, rgba(173, 38, 59, 1) 0%, rgba(172, 57, 57, 1) 39%, rgba(179, 11, 11, 1) 70%, rgba(175, 23, 23, 1) 99%);
+    display: flex;
+    height: 3rem;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+
+.header-pokeball {
+    position: absolute;
+    transform: rotate( 180deg);
+    top: 0.5rem;
+    width: 7rem;
+}
+
+.pokemon-logo {
+    filter: drop-shadow(3px 3px 3px #222);
+    left: 2rem;
+    position: absolute;
+    width: 7rem;
+    -webkit-filter: drop-shadow(3px 3px 3px #222);
+}
+
+.pokeball-card {
+    color: white;
+    opacity: 0.1;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+.wrap-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 90%;
+}
+
+.flex-item {
+    background-color: #f1f1f1;
+    flex: 50%;
+    padding: 10px;
+}
+
+.card {
+    align-content: center;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-name: fadeInOpacity;
+    background-color: azure;
+    border: 1px solid;
+    border-radius: 10px;
+    display: flex;
+    font-family: "Consolas", monospace;
+    height: 350px;
+    justify-content: center;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    opacity: 1;
+    padding-top: 1rem;
+    position: relative;
+    transition: all 400ms cubic-bezier(.47, 1.64, .41, .8);
+    width: 250px;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.pokemonBall {
+    bottom: 0;
+    opacity: 0.1;
+    right: -26px;
+}
+
+.img-pokemon {
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-name: fadeInOpacity;
+    filter: drop-shadow(3px 3px 3px #222);
+    opacity: 1;
+    top: 25%;
+    transition: all 400ms cubic-bezier(.47, 1.64, .41, .8);
+    z-index: 2;
+    -webkit-filter: drop-shadow(3px 3px 3px #222);
+}
+
+.title,
+.footer-id {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+    z-index: 1;
+}
+
+.card .footer-id {
+    font-size: 10px;
+}
+
+.card .img-pokemon {
+    position: absolute;
+    height: 11rem;
+    width: 11rem;
+}
+
+.card:hover {
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.card:hover .img-pokemon {
+    filter: drop-shadow(5px 5px 5px #222);
+    transform: scale(1.5);
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+}
+
+.div-types {
+    align-content: center;
+    bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+.div-types img {
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-name: fadeInOpacity;
+    filter: drop-shadow(3px 3px 3px #222);
+    height: 2rem;
+    opacity: 1;
+    width: 2rem;
+    -webkit-filter: drop-shadow(3px 3px 3px #222);
+}
+
+.types-title {
+    bottom: 3.5rem;
+    position: absolute;
+}
+
+@media only screen and (max-width: 500px) {
+    .App {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    .pokemon-logo {
+        top: 0.5rem;
+        left: 1rem;
+        width: 5rem;
+    }
+    .wrap-container {
+        width: 100%;
+    }
+    .card {
+        flex-grow: 1;
+        height: 250px;
+        width: 100%;
+    }
+    .card .img-pokemon {
+        height: 8rem;
+        width: 8rem;
+    }
+}
